@@ -10,21 +10,21 @@ def add(a, b): # do not change the heading of the function
 ################# Question 1 #################
 
 def nsqrt(x): # do not change the heading of the function
+    if x < 0:
+        return
     if x < 2:
         return  x
-    left , right = 0,x
-    flag = 0
-    while abs(flag - x) > 0.01:
-        mid = left + (float(right -left))/2
-        flag = mid * mid
-        if flag < x:
-            left = mid
+    left,right = 0,x
+    while left + 1 != right:
+        mid = (left + right)/2.0
+        flag = mid**2
+        if flag > x:
+            right = math.ceil(mid)
+        elif flag < x:
+            left = math.floor(mid)
         else:
-            right = mid
-
-    return  round(mid)
-
-
+            return int(mid)
+    return left
 
 ################# Question 2 #################
 
@@ -47,7 +47,6 @@ def find_root(f, fprime, x_0=1.0, EPSILON = 1E-7, MAX_ITER = 1000): # do not cha
     while abs(root_lis[-1]-root_lis[-2]) >= EPSILON and len(root_lis) - 2  < MAX_ITER:
         root_lis.append(root_lis[-1] - (f(root_lis[-1])/fprime(root_lis[-1])))
     return root_lis[-1]
-
 
 ################# Question 3 #################
 class Tree(object):
@@ -92,3 +91,4 @@ def max_depth(root): # do not change the heading of the function
         if depth <= k + 1:
             depth = k + 1
     return depth
+
