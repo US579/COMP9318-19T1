@@ -7,4 +7,8 @@ output/
 tmp/nanoc/
 
 # Crash Log
+
 crash.log
+*.sh
+.git 
+.idea
