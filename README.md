@@ -13,3 +13,13 @@ Seen token as a tree and every number behind '[' is the parent of the number ben
 
 2.lab2
 * Optimal binning algorithm using dynamic programming
+
+Error Sum of Squares (SSE)
+
+SSE is the sum of the squared differences between each observation and its group's mean. It can be used as a measure of variation within a cluster. If all cases within a cluster are identical the SSE would then be equal to 0.
+
+The formula for SSE is:
+
+`SSE = \sum_{i=1}^{n}\left ( x_{i} \right -\bar{x})^2`
+
+ 
