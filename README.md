@@ -1,7 +1,7 @@
 # COMP9318-19T1
 ## About
 
-### lab1
+### LAB1
 
 * Q1 Bisection method
 
@@ -11,7 +11,7 @@
 
 Seen token as a tree and every number behind '[' is the parent of the number benhind next '[', so the main tree parent node is '1' and the second layer parent nodes is '2' '6' '10'
 
-### lab2
+### LAB2
 * Optimal binning algorithm using dynamic programming
 
 Error Sum of Squares (SSE)
