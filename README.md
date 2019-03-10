@@ -20,6 +20,6 @@ SSE is the sum of the squared differences between each observation and its group
 
 The formula for SSE is:
 
-`SSE = \sum_{i=1}^{n}\left ( x_{i} \right -\bar{x})^2`
+<a href="https://www.codecogs.com/eqnedit.php?latex=SSE&space;=&space;\sum_{i=1}^{n}\left&space;(&space;x_{i}&space;\right&space;-\bar{x})^2" target="_blank"><img src="https://latex.codecogs.com/gif.latex?SSE&space;=&space;\sum_{i=1}^{n}\left&space;(&space;x_{i}&space;\right&space;-\bar{x})^2" title="SSE = \sum_{i=1}^{n}\left ( x_{i} \right -\bar{x})^2" /></a>
 
  
