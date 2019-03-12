@@ -72,9 +72,3 @@ def v_opt_dp(x, num_bins):# do not change the heading of the function
 
 
 
-
-    
-
-a ,b =v_opt_dp(x,num_bins)
-print(a)
-print(b)
