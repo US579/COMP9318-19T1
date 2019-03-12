@@ -88,7 +88,7 @@ def v_opt_dp(x, num_bins):# do not change the heading of the function
 
 
 
-a = [1]
+
 
 
 #print(SSE(a))
