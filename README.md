@@ -29,6 +29,9 @@ Recurisive method will compute many times, although its space complicity is lowe
 In this case we apply dynamic programming, like Fibonacci sequence , we use privious consequence to compute the next by storing it in the mermory.
 
 this lab2 also implement this strategy 
+
+the first row ,represent from that block divide into one bin
+
 [  ] [  ] [  ] [3, 1, 18, 11, 13, 17]    -1
 
 [  ] [  ] [  ] [1, 18, 11, 13, 17]       -1
@@ -40,5 +43,36 @@ this lab2 also implement this strategy
 [  ] [  ] [  ] [13, 17]                   8.0
 
 [  ] [  ] [  ] [17]                       0
+
+the second row ,represent from that block divide into two bin
+
+[  ] [  ] [[3, 1, 18, 11, 13, 17]]        -1
+
+[  ] [  ] [[1, 18, 11, 13, 17]]           -1
+
+[  ] [  ] [[18, 11, 13, 17]]              18.666
+
+[  ] [  ] [[11, 13, 17]]                   2
+
+[  ] [  ] [[13, 17]]                       0
+
+[  ] [  ] [[17]]                          -1
+
+etc......
+
+Divding the problem into sub-problem , store the first row because it is the best optimal solution [11, 13, 17]:             
+
+18.666, [13, 17]:8.0,[17]:0, after that when we are going to the second row,it will divide into two bins from the first number 
+
+in the list, so [18, 11, 13, 17] can be split to prefix and suffix,which are [18] and [11,13,17],as we already know what the 
+
+cost of [11,13,17] from the first row's data which is 18.666 and the cost of [18] is 0 , we are able to calculate the optimal 
+
+cost that dividing [18, 11, 13, 17] into two bins is 0 + 18.999 == 18.999 ,this is the core thinking of the dynamic 
+
+programming.
+
+
+
 
 
