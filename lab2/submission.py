@@ -54,7 +54,7 @@ def v_opt_dp(x, num_bins):# do not change the heading of the function
                             suf_suffix = suffix[mid:]
                             pre_cost = SSE(pre_suffix)
                             num = index_matrix[i-2].index(suf_suffix)
-                            print(path_matrix[i-2][num])
+                            #print(path_matrix[i-2][num])
                             if i > 2:
                                 one_path+=(path_matrix[i - 2][num])
                             else:
