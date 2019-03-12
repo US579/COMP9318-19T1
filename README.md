@@ -27,20 +27,16 @@ Where n is the number of observations xi is the value of the ith observation and
 Recurisive method will compute many times, although its space complicity is lower than dynamic programmaing.
 
 `import numpy as np
- 
-def sse(arr):
+ def sse(arr):
     if len(arr) == 0: # deal with arr == []
         return 0.0
- 
     avg = np.average(arr)
     val = sum( [(x-avg)*(x-avg) for x in arr] )
     return val
- 
 LARGE_NUM = 1000000000.0
 def v_opt_rec(xx, b):
     mincost = LARGE_NUM
-    n = len(xx)
- 
+    n = len(xx) 
     # check boundary condition:
     if n < b:
         return LARGE_NUM + 1
@@ -53,5 +49,4 @@ def v_opt_rec(xx, b):
             cost = sse(prefix) + v_opt_rec(suffix, b - 1)
             print('  '*calc_depth(b),'mincost:',mincost,'cost:',cost)
             mincost = min(mincost, cost)
- 
         return mincost`
