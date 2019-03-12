@@ -1,5 +1,3 @@
-# Made By Jian Gao 2019/03/08
-
 '''
 >>> matrix, bins = sub.v_opt_dp(l1, bin1)
 >>> matrix

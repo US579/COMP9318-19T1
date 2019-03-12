@@ -2,8 +2,8 @@
 import pandas as pd
 import numpy as np
 
-x = [3, 1, 18, 11, 13, 17]
-num_bins = 4
+#x = [3, 1, 18, 11, 13, 17]
+#num_bins = 4
 
 ################# Question 1 #################
 
@@ -27,7 +27,6 @@ def v_opt_dp(x, num_bins):# do not change the heading of the function
     cost_matrix = [[-1 for _ in range(len(x))] for _ in range(num_bins)]
     index_matrix = [[-1 for _ in range(len(x))] for _ in range(num_bins)]
     path_matrix  = [[-1 for _ in range(len(x))] for _ in range(num_bins)]
-
     for i in range(1,num_bins+1):
         for j in range(len(x)):
             if num_bins - i <= j and len(x) - j >= i:
@@ -44,7 +43,7 @@ def v_opt_dp(x, num_bins):# do not change the heading of the function
                             set_path.append([ele])
                         index_matrix[i-1][j] = suffix
                         path_matrix[i-1][j] = set_path
-                        cost_matrix[i-1][j] = 0
+                        cost_matrix[i-1][j] = 0.0
                     else:
                         lis_cost = []
                         for mid in range(1, len(suffix) -i + 2):
@@ -54,7 +53,6 @@ def v_opt_dp(x, num_bins):# do not change the heading of the function
                             suf_suffix = suffix[mid:]
                             pre_cost = SSE(pre_suffix)
                             num = index_matrix[i-2].index(suf_suffix)
-                            #print(path_matrix[i-2][num])
                             if i > 2:
                                 one_path+=(path_matrix[i - 2][num])
                             else:
