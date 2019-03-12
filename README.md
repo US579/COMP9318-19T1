@@ -66,9 +66,9 @@ Divding the problem into sub-problem , store the first row because it is the bes
 
 in the list, so [18, 11, 13, 17] can be split to prefix and suffix,which are [18] and [11,13,17],as we already know what the 
 
-cost of [11,13,17] from the first row's data which is 18.666 and the cost of [18] is 0 , we are able to calculate the optimal 
+cost of [11,13,17] from the first row's data which is 18.666 and the cost of [18] which is 0 , we are able to calculate the 
 
-cost that dividing [18, 11, 13, 17] into two bins is 0 + 18.999 == 18.999 ,this is the core thinking of the dynamic 
+optimal cost that dividing [18, 11, 13, 17] into two bins is 0 + 18.999 == 18.999 ,this is the core thinking of the dynamic 
 
 programming.
 
