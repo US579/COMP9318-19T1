@@ -24,29 +24,21 @@ The formula for SSE is:
 
 Where n is the number of observations xi is the value of the ith observation and 0 is the mean of all the observations. This can also be rearranged to be written as seen in J.H. Ward's paper.
 
-Recurisive method will compute many times, although its space complicity is lower than dynamic programmaing.
+Recurisive method will compute many times, although its space complicity is lower than dynamic programming.
 
-`import numpy as np
- def sse(arr):
-    if len(arr) == 0: # deal with arr == []
-        return 0.0
-    avg = np.average(arr)
-    val = sum( [(x-avg)*(x-avg) for x in arr] )
-    return val
-LARGE_NUM = 1000000000.0
-def v_opt_rec(xx, b):
-    mincost = LARGE_NUM
-    n = len(xx) 
-    # check boundary condition:
-    if n < b:
-        return LARGE_NUM + 1
-    elif b == 1:
-        return sse(xx)
-    else:  # the general case
-        for t in range(n):
-            prefix = xx[0 : t+1]
-            suffix = xx[t+1 : ]
-            cost = sse(prefix) + v_opt_rec(suffix, b - 1)
-            print('  '*calc_depth(b),'mincost:',mincost,'cost:',cost)
-            mincost = min(mincost, cost)
-        return mincost`
+In this case we apply dynamic programming, like Fibonacci sequence , we use privious consequence to compute the next by storing it in the mermory.
+
+this lab2 also implement this strategy 
+[  ] [  ] [  ] [3, 1, 18, 11, 13, 17]    -1
+
+[  ] [  ] [  ] [1, 18, 11, 13, 17]       -1
+
+[  ] [  ] [  ] [18, 11, 13, 17]          -1
+
+[  ] [  ] [  ] [11, 13, 17]              18.666
+
+[  ] [  ] [  ] [13, 17]                   8.0
+
+[  ] [  ] [  ] [17]                       0
+
+
