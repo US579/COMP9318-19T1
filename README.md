@@ -73,6 +73,8 @@ optimal cost that dividing [18, 11, 13, 17] into two bins is 0 + 18.999 == 18.99
 programming.
 
 
+### LAB3
+
 
 
 
