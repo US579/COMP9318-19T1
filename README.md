@@ -83,9 +83,13 @@ the main formula to caculate weights
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\theta&space;=\theta&space;-&space;\alpha&space;*&space;X^{T}*E" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\theta&space;=\theta&space;-&space;\alpha&space;*&space;X^{T}*E" title="\theta =\theta - \alpha * X^{T}*E" /></a>
 
-`The thing you need to know`
+in this formula ,θ is weight, α is learning rate (how far it will take for one step) , the numpy.T of data is X.T ,
 
-function Sigmoid
+the error is E
+
+#### `The thing you need to know`
+
+Function Sigmoid
 
 <a href="https://www.codecogs.com/eqntheedit.php?latex=\sigma&space;\left&space;(&space;z&space;\right&space;)=\frac{1}{1&space;&plus;&space;e^{-z}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\sigma&space;\left&space;(&space;z&space;\right&space;)=\frac{1}{1&space;&plus;&space;e^{-z}}" title="\sigma \left ( z \right )=\frac{1}{1 + e^{-z}}" /></a>
 
