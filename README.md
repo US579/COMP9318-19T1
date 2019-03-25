@@ -10,6 +10,8 @@
 * Q3 token = ['1', '[', '2', '[', '3', '4', '5', ']', '6', '[', '7', '8', '[', '9', ']', '10', '[', '11', '12', ']', ']', '13', ']']
 
 Seen token as a tree and every number behind '[' is the parent of the number benhind next '[', so the main tree parent node is '1' and the second layer parent nodes is '2' '6' '10'
+ 
+#### Marks: 100/100
 
 ### LAB2
 * Optimal binning algorithm using dynamic programming
@@ -71,6 +73,12 @@ cost of [11,13,17] from the first row's data which is 18.666 and the cost of [18
 optimal cost that dividing [18, 11, 13, 17] into two bins is 0 + 18.999 == 18.999 ,this is the core thinking of the dynamic 
 
 programming.
+
+
+### LAB3
+
+Logistic Regression using Gradient Descent
+
 
 
 
