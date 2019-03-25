@@ -7,7 +7,8 @@ output/
 tmp/nanoc/
 
 # Crash Log
-
+.Ds*
+.ip*
 crash.log
 *.sh
 .git 
