@@ -3,8 +3,6 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 
-
-
 data_file='./asset/a'
 
 ## Read in the Data...
@@ -23,16 +21,37 @@ def sigmoid(inX):
 
 def logistic_regression(data, labels, weights, num_epochs, learning_rate): # do not change the heading of the function
     dataMat = np.insert(data,0,1,axis=1)
-    lablMat = np.mat(labels).transpose()
+    lablMat = np.mat(labels).T
     for i in range(num_epochs):
-        theta = sigmoid(dataMat * weights)
-        e = theta - lablMat
-        new_weight = weights - learning_rate*dataMat.T*e
-        weights = new_weight
-        #print(weights)
-    #print(weights)
-    print(weights.A1)
+        error = sigmoid(dataMat*weights) - lablMat
+        weights = weights - learning_rate * dataMat.T*error
+    #print(np.array(for i in weights.T[0]))
+    return np.array(weights.T.tolist()[0])
 
 
-logistic_regression(data,labels,weights,num_epochs,learning_rate)
+weights = logistic_regression(data,labels,weights,num_epochs,learning_rate)
 
+
+def plotBestFit(weights,dataMat,labelMat):
+    n=np.shape(dataMat)[0]
+    xcord1=[];ycord1=[]
+    xcord2=[];ycord2=[]
+    for i in range(n):
+        if labelMat[i]==1:
+            xcord1.append(dataMat[i][0])
+            ycord1.append(dataMat[i][1])
+        else:
+            xcord2.append(dataMat[i][0])
+            ycord2.append(dataMat[i][1])
+    fig=plt.figure()
+    ax=fig.add_subplot(111)
+    ax.scatter(xcord1,ycord1,s=30,c='red',marker='s')
+    ax.scatter(xcord2,ycord2,s=30,c='green')
+    x=np.arange(-3,3,0.1)
+    y=(-weights[0,0]-weights[1,0]*x)/weights[2,0] #matix
+    ax.plot(x,y)
+    plt.xlabel('X1')
+    plt.ylabel('X2')
+    plt.show()
+
+plotBestFit(weights,data,labels)
