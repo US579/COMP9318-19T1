@@ -13,7 +13,7 @@ weights = np.zeros(3) # We compute the weight for the intercept as well...
 num_epochs = 50000
 learning_rate = 50e-5
 
-
+#this is probablity rate 
 def sigmoid(inX):
     return 1.0 / (1 + np.exp(-inX))
 
@@ -21,8 +21,9 @@ def logistic_regression(data, labels, weights, num_epochs, learning_rate): # do 
     dataMat = np.insert(data,0,1,axis=1)
     lablMat = np.mat(labels).T
     for i in range(num_epochs):
+        #the difference between the real probablity and label which called error rate
         error = sigmoid(dataMat*weights) - lablMat
-        weights = weights - learning_rate * dataMat.T*error
+        weights -= learning_rate * dataMat.T*error
     print(np.array(weights.T.tolist()[0]))
     return np.array(weights.T.tolist()[0])
 
