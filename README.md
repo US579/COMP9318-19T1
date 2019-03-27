@@ -99,6 +99,7 @@ it mainly because `-z to the power of e` is always smaller than 1  and the denom
 
 it always smaller than 1
 
+we can call it as Probability value
 
 
 
