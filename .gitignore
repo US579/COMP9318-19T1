@@ -10,3 +10,11 @@ crash.log
 .fls
 .fdb*
 .aux
+.idea
+.vscode
+.pyc
+venv/
+**/__pycache__/
+.txt
+.DS_Store
+.~lock.README.txt#
