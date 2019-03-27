@@ -1,0 +1,12 @@
+output/
+tmp/nanoc/
+.Ds*
+.ip*
+crash.log
+*.sh
+.git 
+.idea
+.log
+.fls
+.fdb*
+.aux
