@@ -1,24 +1,123 @@
-\documentclass{article}
+\documentclass[a4paper,12pt]{article}
 
 \usepackage{fontspec, xunicode, xltxtra}
 
+\usepackage{geometry}
+ \geometry{
+ a4paper,
+ total={210mm,297mm},
+ left=10mm,
+ right=10mm,
+ top=25mm,
+ bottom=20mm,
+ }
+
+
+
 \title{COMP9318: Assignment 1}
 \author{Wanze Liu (z5137189)\\
-\date{12/05/2018}\\
-\ UNSW\\
+\date{11/04/2019}\\
+\large  UNSW\\
 \\
-\ School of Computer Science and Engineering\\[-0.3ex]
-\\
+\ School of Computer Science and Engineering\\\\
 \ Sydney, Australia\\
 \\
 }
 
+
 \begin{document}
+\maketitle
 
-\maketitle{}
+%------------------------------------------------------------%
+\newpage
 
-\section{Introduction}
+% ---- Q1(Q)
+\section*{Question 1}
 
-This is introduction section
-\section{Iasdasz}
+% ---- Q1(sol)
+\subsection*{1.1}
+\setlength{\parindent}{0pt} % Don't indent new paragraphs
+
+\begin{Large}
+\begin{center}
+\begin{tabular}{llllr}
+% \toprule
+Location &  Time &  Item &  Quantity \\
+% \midrule
+ALL &  2006 &       PS2 &    1500 \\
+ALL &  2006 &       Wii &     500 \\
+ALL &  2006 &       ALL &    2000 \\
+ALL &  2005 &       PS2 &    1400 \\
+ALL &  2005 &  XBox 360 &    1700 \\
+ALL &  2005 &       ALL &    3100 \\
+ALL &   ALL &       PS2 &    2900 \\
+ALL &   ALL &       Wii &     500 \\
+ALL &   ALL &  XBox 360 &    1700 \\
+ALL &   ALL &       ALL &    5100 \\
+Melbourne &  2005 &  XBox 360 &    1700 \\
+Melbourne &  2005 &       ALL &    1700 \\
+Melbourne &   ALL &  XBox 360 &    1700 \\
+Melbourne &   ALL &       ALL &    1700 \\
+Sydney &  2006 &       PS2 &    1500 \\
+Sydney &  2006 &       Wii &     500 \\
+Sydney &  2006 &       ALL &    2000 \\
+Sydney &  2005 &       PS2 &    1400 \\
+Sydney &  2005 &       ALL &    1400 \\
+Sydney &   ALL &       PS2 &    2900 \\
+Sydney &   ALL &       Wii &     500 \\
+Sydney &   ALL &       ALL &    3400 \\
+
+% \bottomrule
+\end{tabular}
+\end{center}
+\end{Large}
+
+
+
+\subsection*{1.2}
+
+\begin{large}
+\begin{flushleft}
+SELECT Location, Time, Item, SUM(Quantity)\\
+FROM Sales\\
+GROUP BY Location, Time, Item\\
+UNION ALL\\
+SELECT NULL, Time, Item, SUM(Quantity)\\
+FROM Sales\\
+GROUP BY Time, Item\\
+UNION ALL\\
+SELECT Location, NULL, Item, SUM(Quantity)\\
+FROM Sales\\
+GROUP BY Location, Item\\
+UNION ALL\\
+SELECT Location, Time, NULL, SUM(Quantity)\\
+FROM Sales\\
+GROUP BY Location, Time\\
+UNION ALL\\
+SELECT NULL, NULL, Item, SUM(Quantity)\\
+FROM Sales\\
+GROUP BY Item\\
+UNION ALL\\
+SELECT NULL, Time, NULL, SUM(Quantity)\\
+FROM Sales\\
+GROUP BY Time\\
+UNION ALL\\
+SELECT Location, NULL, NULL, SUM(Quantity)\\
+FROM Sales\\
+GROUP BY Location\\
+UNION ALL\\
+SELECT NULL, NULL, NULL, SUM(Quantity)\\
+FROM Sales\\
+ORDER by Location, Time, desc;\\
+
+\end{flushleft}
+\end{large}
+
+
+
+
+
+
+
 \end{document}
+
