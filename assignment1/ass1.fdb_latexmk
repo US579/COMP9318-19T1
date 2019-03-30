@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1553865613 "ass1.tex" "ass1.pdf" "ass1" 1553865615
+["pdflatex"] 1553987636 "ass1.tex" "ass1.pdf" "ass1" 1553987637
   "/usr/local/texlive/2018/texmf-dist/fonts/map/fontname/texfonts.map" 1511824771 3332 103109f5612ad95229751940c61aada0 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm" 1480098701 1524 4414a8315f39513458b80dfc63bff03a ""
   "/usr/local/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmr10.tfm" 1480098701 1296 45809c5a464d5f32c8f98ba97c1bb47f ""
@@ -40,8 +40,8 @@
   "/usr/local/texlive/2018/texmf-dist/web2c/texmf.cnf" 1522066949 33362 cf75436e19743e94a92a6b1b9183c434 ""
   "/usr/local/texlive/2018/texmf-var/web2c/xetex/xelatex.fmt" 1553662418 3731948 7080b9ea722af23eaa6ba8564e9cc4c3 ""
   "/usr/local/texlive/2018/texmf.cnf" 1523934483 577 0b39adfd7c93507ff20c9c14c2f1a33f ""
-  "ass1.aux" 1553865615 8 a94a2480d3289e625eea47cd1b285758 ""
-  "ass1.tex" 1553865613 5794 3d2a29f50c61e40ffa68d2d26fb1113e ""
+  "ass1.aux" 1553987637 8 a94a2480d3289e625eea47cd1b285758 ""
+  "ass1.tex" 1553987635 5805 b2917c680a6adbca7ea50ad9134e8b24 ""
   (generated)
   "ass1.pdf"
   "ass1.aux"
