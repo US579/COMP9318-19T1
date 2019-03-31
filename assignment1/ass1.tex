@@ -242,11 +242,48 @@ $$P(y=0|x) =\frac{P(x|y=0)P(y=1)}{P(x)} $$
 
 then ,we can get \\
 $$\frac{P(y=1|x)}{P(y=0|x)} = \frac{P(x|y=1)P(y=1)}{P(x|y=0)P(y=1)}$$
-$$= \frac{P(y=1)\prod\limits_{i=0}^d P(x_i|y=1)}{P(y=0)\prod\limits_{i=0}^dP(x_i|y=0)} $$
+$$= \frac{P(y=1)\prod\limits_{i=1}^m P(x_i|y=1)}{P(y=0)\prod\limits_{i=1}^n P(x_i|y=0)} $$
+$$= \frac{P(y=1)}{P(y=0)} \prod\limits_{i=1}^n \frac{P(x_i|y=1)}{P(x_i|y=0)}$$
+
+We denote $p = P(y=1)$ ,then $1-p = P(y=0)$\\
+$a_i = P(x=1 | y=1)$ ,then $1-a_i = P(x=0|y=1)$
+\begin{center}
+So  ,$P(x_i|y=1)=a_i^{x_i}(1-a_i)^{1-x_i}$\\  
+\end{center}
+$b_i = P(x=1 | y=0)$ ,then $1-b_i = P(x=0|y=0)$
+\begin{center}
+And also  ,$P(x_i|y=1)=b_i^{x_i}(1-b_i)^{1-x_i}$\\  
+\end{center}
+Then , we can get the formula \\
+$$\frac{P(x|y=1)P(y=1)}{P(x|y=0)P(y=1)} = \frac{p}{1-p}\prod\limits_{i=1}^n \frac{a_i^{x_i}(1-a_i)^{1-x_i}}{b_i^{x_i}(1-b_i)^{1-x_i}}$$
+
+Then , we apply log caculation on both side of the formula and based on the hind provided , we can get
+$$log\frac{P(x|y=1)P(y=1)}{P(x|y=0)P(y=1)} = log(\frac{p}{1-p}\prod\limits_{i=1}^n \frac{a_i^{x_i}(1-a_i)^{1-x_i}}{b_i^{x_i}(1-b_i)^{1-x_i}})$$
+
+$$=log\frac{p}{1-p}+\sum\limits_{i=1}^nlog\frac{a_i^{x_i}(1-a_i)^{1-x_i}}{b_i^{x_i}(1-b_i)^{1-x_i}}$$
 
 
+$$=log\frac{p}{1-p}+\sum\limits_{i=1}^nx_ilog\frac{a_i(1-a_i)(1-a_i)^{-1}}{b_i(1-b_i)(1-b_i)^{-1}}$$
+
+$$=log\frac{p}{1-p}+\sum\limits_{i=1}^nlog\frac{1-a_i}{1-b_i} + \sum\limits_{i=1}^nx_ilog\frac{(1-b_i)a_i}{(1-a_i)b_i} $$
+
+As we can know $log\frac{p}{1-p}$ and $\sum\limits_{i=1}^nlog\frac{1-a_i}{1-b_i}$ are constant number\\
+
+So , we can get 
+$$m = log\frac{p}{1-p} + \sum\limits_{i=1}^nlog\frac{1-a_i}{1-b_i} $$
+
+and
+$$w_i = \frac{(1-b_i)a_i}{(1-a_i)b_i} $$
+
+So ,the furmula we deduce below 
+
+$$m + \sum\limits_{i=1}^n w_i x_i $$
+
+which is the liner classifier\\
 
 
+\newpage
+\subsection*{2.2}
 
 
 
