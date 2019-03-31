@@ -1,7 +1,7 @@
 \documentclass[a4paper,12pt]{article}
 
 \usepackage{fontspec, xunicode, xltxtra}
-
+\usepackage{mathtools}
 \usepackage{geometry}
  \geometry{
  a4paper,
@@ -223,11 +223,27 @@ Quality & Offset &   Quality & Offset &Dense MD array\\
 \end{center}
 \end{Large}
 
-
+\newpage
 \section*{Question 2}
 \subsection*{2.1}
 
-according to 
+Based on the Bayes rule , the classifer NB can been wirtten as follow\\
+$$ NB(x)=\left\{
+\begin{aligned}
+1 \ \ , \frac{P(y=1|x)}{P(y=0|x)} \geq 1 \\
+0 \ \ , \frac{P(y=1|x)}{P(y=0|x)} < 1 \\
+\end{aligned}
+\right.
+$$
+
+now, We can determine the value of $\frac{P(y=1|x)}{P(y=0|x)}$,according to the formula below\\
+$$P(y=1|x) = \frac{P(x|y=1)P(y=1)}{P(x)}$$  
+$$P(y=0|x) =\frac{P(x|y=0)P(y=1)}{P(x)} $$
+
+then ,we can get \\
+$$\frac{P(y=1|x)}{P(y=0|x)} = \frac{P(x|y=1)P(y=1)}{P(x|y=0)P(y=1)}$$
+$$= \frac{P(y=1)\prod\limits_{i=0}^d P(x_i|y=1)}{P(y=0)\prod\limits_{i=0}^dP(x_i|y=0)} $$
+
 
 
 
