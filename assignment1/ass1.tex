@@ -270,21 +270,25 @@ $$=log\frac{p}{1-p}+\sum\limits_{i=1}^nlog\frac{1-a_i}{1-b_i} + \sum\limits_{i=1
 As we can know $log\frac{p}{1-p}$ and $\sum\limits_{i=1}^nlog\frac{1-a_i}{1-b_i}$ are constant number\\
 
 So , we can get 
-$$m = log\frac{p}{1-p} + \sum\limits_{i=1}^nlog\frac{1-a_i}{1-b_i} $$
+$$b = log\frac{p}{1-p} + \sum\limits_{i=1}^nlog\frac{1-a_i}{1-b_i} $$
 
 and
 $$w_i = \frac{(1-b_i)a_i}{(1-a_i)b_i} $$
 
 So ,the furmula we deduce below 
 
-$$m + \sum\limits_{i=1}^n w_i x_i $$
+$$b + \sum\limits_{i=1}^n w_i x_i $$
 
 which is the liner classifier\\
 
 
 \newpage
 \subsection*{2.2}
+It is manily because naive Bayes classifier is simple to do perdicitions by appling the trained value directly, and all of dataset learned independently(caculate the value of $P(x)$ , $P(y)$  , $P(x|y)$ , $ P(y|x)$) , however , Logistic Regression classifier is more sophisticated than naive Bayes ,as it need to full search in data and more training process like Gradient Ascent or Dscent need to be applied to control the accuracy of convergence, and also dataset need to learn jointly, moreover , the data complexity requirement for learning $w_{LR}$ is $O(n)$, while it is $O(log⁡n)$ for learning $w_{NB}$ whcih is smaller than $w_{LR}$.
 
+
+\section*{question 3}
+\subsection*{3.1}
 
 
 
