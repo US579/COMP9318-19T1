@@ -85,9 +85,9 @@ the main formula to caculate weights
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\theta&space;=\theta&space;-&space;\alpha&space;*&space;X^{T}*E" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\theta&space;=\theta&space;-&space;\alpha&space;*&space;X^{T}*E" title="\theta =\theta - \alpha * X^{T}*E" /></a>
 
-in this formula ,θ is weight, α is learning rate (how far it will take for one step) , the numpy.T of data is X.T ,
+in this formula ,θ is weight(the cofficient), α is learning rate (how far it will take for one step) , the numpy.T of data is X.T ,
 
-the error is E
+the cost is E
 
 #### `The thing you need to know`
 
