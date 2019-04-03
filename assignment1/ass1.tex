@@ -238,10 +238,10 @@ $$
 
 now, We can determine the value of $\frac{P(y=1|x)}{P(y=0|x)}$,according to the formula below\\
 $$P(y=1|x) = \frac{P(x|y=1)P(y=1)}{P(x)}$$  
-$$P(y=0|x) =\frac{P(x|y=0)P(y=1)}{P(x)} $$
+$$P(y=0|x) =\frac{P(x|y=0)P(y=0)}{P(x)} $$
 
 then ,we can get \\
-$$\frac{P(y=1|x)}{P(y=0|x)} = \frac{P(x|y=1)P(y=1)}{P(x|y=0)P(y=1)}$$
+$$\frac{P(y=1|x)}{P(y=0|x)} = \frac{P(x|y=1)P(y=1)}{P(x|y=0)P(y=0)}$$
 $$= \frac{P(y=1)\prod\limits_{i=1}^m P(x_i|y=1)}{P(y=0)\prod\limits_{i=1}^n P(x_i|y=0)} $$
 $$= \frac{P(y=1)}{P(y=0)} \prod\limits_{i=1}^n \frac{P(x_i|y=1)}{P(x_i|y=0)}$$
 
@@ -263,7 +263,7 @@ $$log\frac{P(x|y=1)P(y=1)}{P(x|y=0)P(y=1)} = log(\frac{p}{1-p}\prod\limits_{i=1}
 $$=log\frac{p}{1-p}+\sum\limits_{i=1}^nlog\frac{a_i^{x_i}(1-a_i)^{1-x_i}}{b_i^{x_i}(1-b_i)^{1-x_i}}$$
 
 
-$$=log\frac{p}{1-p}+\sum\limits_{i=1}^nx_ilog\frac{a_i(1-a_i)(1-a_i)^{-1}}{b_i(1-b_i)(1-b_i)^{-1}}$$
+$$=log\frac{p}{1-p}+\sum\limits_{i=1}^n log\frac{a_i^{x_i}(1-a_i)^{-x_i}(1-a_i)}{b_i^{x_i}(1-b_i)^{-x_i}(1-b_i)}$$
 
 $$=log\frac{p}{1-p}+\sum\limits_{i=1}^nlog\frac{1-a_i}{1-b_i} + \sum\limits_{i=1}^nx_ilog\frac{(1-b_i)a_i}{(1-a_i)b_i} $$
 
@@ -289,7 +289,6 @@ It is manily because naive Bayes classifier is simple to do perdicitions by appl
 
 \section*{question 3}
 \subsection*{3.1}
-
 
 
 
