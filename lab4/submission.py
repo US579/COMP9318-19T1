@@ -1,13 +1,9 @@
 ## import modules here
-
-################# Question 1 #################
 from collections import Counter
 import pandas as pd
 
+################# Question 1 #################
 raw_data = pd.read_csv('./asset/data.txt', sep='\t')
-raw_data.head()
-
-
 def tokenize(sms):
     return sms.split(' ')
 
@@ -19,17 +15,14 @@ def get_freq_of_tokens(sms):
         else:
             tokens[token] += 1
     return tokens
-
 training_data = []
 for index in range(len(raw_data)):
     training_data.append((get_freq_of_tokens(raw_data.iloc[index].text), raw_data.iloc[index].category))
 
 
-sms = 'I am not spam'
+
 #caculate the probility of P(class) the class is category here which has two classes
 #one is "ham" and another one is "spam"
-
-
 def multinomial_nb(training_data, sms):# do not change the heading of the function
     class_disturbution = dict()
     for item in training_data:
@@ -65,14 +58,9 @@ def multinomial_nb(training_data, sms):# do not change the heading of the functi
     conditional_Pro_ham = dict()
     conditional_Pro_spam = dict()
 
-    sms_token = tokenize(sms)
-
-    for word in sms_token:
+    for word in sms:
         if word not in word_occurances['ham'] and word not in word_occurances['spam']:
-            conditional_Pro_spam[word] = 0
-            conditional_Pro_ham[word] = 0
             continue
-
         category_ham = word_occurances['ham']
         if word not in category_ham.keys():
             a = 0
@@ -92,23 +80,35 @@ def multinomial_nb(training_data, sms):# do not change the heading of the functi
         pro_spam = P_w_c(x, y, V_num)
         conditional_Pro_spam[word] = pro_spam
 
-    #print(conditional_Pro_spam)
-    #print(conditional_Pro_ham)
-
-    word_fre = get_freq_of_tokens(sms)
+    def get_freqs(sms):
+        tokens = {}
+        for token in sms:
+            if token not in tokens:
+                tokens[token] = 1
+            else:
+                tokens[token] += 1
+        return tokens
+    word_fre = get_freqs(sms)
     #print(word_fre)
 
     pham = 1
     pspam = 1
 
     for k, v in word_fre.items():
-        if conditional_Pro_ham[k] == 0:
-            continue
-
-        pham *= conditional_Pro_ham[k] ** v
-        pspam *= conditional_Pro_spam[k] ** v
+        try:
+            pham *= conditional_Pro_ham[k] ** v
+            pspam *= conditional_Pro_spam[k] ** v
+        except KeyError:
+            pass
 
     ratio = (pspam * P_spam) / (pham * P_ham)
     return ratio
 
-    #print(ratio)
+
+sms = 'I am not spam'
+sms =tokenize(sms)
+print(multinomial_nb(training_data, sms))
+
+'''
+the answer is : 0.23427672955974846
+'''
