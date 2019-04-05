@@ -130,38 +130,6 @@ we also use add-1 smoothing in this case , the purpose is that we aviod the 0 ap
 word not occur in the vacabulary ,the probility will not assign 0 
 
 * 3. <a href="https://www.codecogs.com/eqnedit.php?latex=P(spam)=\frac{2}{6}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?P(spam)=\frac{2}{6}" title="P(spam)=\frac{2}{6}" /></a>
-* 3. <a href="https://www.codecogs.com/eqnedit.php?latex=P(spam)=\frac{2}{6}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?P(spam)=\frac{2}{6}" title="P(spam)=\frac{2}{6}" /></a>
-* 3. <a href="https://www.codecogs.com/eqnedit.php?latex=P(spam)=\frac{2}{6}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?P(spam)=\frac{2}{6}" title="P(spam)=\frac{2}{6}" /></a>
-* 3. <a href="https://www.codecogs.com/eqnedit.php?latex=P(spam)=\frac{2}{6}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?P(spam)=\frac{2}{6}" title="P(spam)=\frac{2}{6}" /></a>
-* 3. <a href="https://www.codecogs.com/eqnedit.php?latex=P(spam)=\frac{2}{6}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?P(spam)=\frac{2}{6}" title="P(spam)=\frac{2}{6}" /></a>
-* 3. <a href="https://www.codecogs.com/eqnedit.php?latex=P(spam)=\frac{2}{6}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?P(spam)=\frac{2}{6}" title="P(spam)=\frac{2}{6}" /></a>
-* 3. <a href="https://www.codecogs.com/eqnedit.php?latex=P(spam)=\frac{2}{6}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?P(spam)=\frac{2}{6}" title="P(spam)=\frac{2}{6}" /></a>
-* 3. <a href="https://www.codecogs.com/eqnedit.php?latex=P(spam)=\frac{2}{6}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?P(spam)=\frac{2}{6}" title="P(spam)=\frac{2}{6}" /></a>
-* 3. <a href="https://www.codecogs.com/eqnedit.php?latex=P(spam)=\frac{2}{6}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?P(spam)=\frac{2}{6}" title="P(spam)=\frac{2}{6}" /></a>
-* 3. <a href="https://www.codecogs.com/eqnedit.php?latex=P(spam)=\frac{2}{6}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?P(spam)=\frac{2}{6}" title="P(spam)=\frac{2}{6}" /></a>
-* 3. <a href="https://www.codecogs.com/eqnedit.php?latex=P(spam)=\frac{2}{6}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?P(spam)=\frac{2}{6}" title="P(spam)=\frac{2}{6}" /></a>
-* 3. <a href="https://www.codecogs.com/eqnedit.php?latex=P(spam)=\frac{2}{6}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?P(spam)=\frac{2}{6}" title="P(spam)=\frac{2}{6}" /></a>
-* 3. <a href="https://www.codecogs.com/eqnedit.php?latex=P(spam)=\frac{2}{6}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?P(spam)=\frac{2}{6}" title="P(spam)=\frac{2}{6}" /></a>
-* 3. <a href="https://www.codecogs.com/eqnedit.php?latex=P(spam)=\frac{2}{6}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?P(spam)=\frac{2}{6}" title="P(spam)=\frac{2}{6}" /></a>
-* 3. <a href="https://www.codecogs.com/eqnedit.php?latex=P(spam)=\frac{2}{6}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?P(spam)=\frac{2}{6}" title="P(spam)=\frac{2}{6}" /></a>
-* 3. <a href="https://www.codecogs.com/eqnedit.php?latex=P(spam)=\frac{2}{6}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?P(spam)=\frac{2}{6}" title="P(spam)=\frac{2}{6}" /></a>
-* 3. <a href="https://www.codecogs.com/eqnedit.php?latex=P(spam)=\frac{2}{6}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?P(spam)=\frac{2}{6}" title="P(spam)=\frac{2}{6}" /></a>
-* 3. <a href="https://www.codecogs.com/eqnedit.php?latex=P(spam)=\frac{2}{6}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?P(spam)=\frac{2}{6}" title="P(spam)=\frac{2}{6}" /></a>
-* 3. <a href="https://www.codecogs.com/eqnedit.php?latex=P(spam)=\frac{2}{6}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?P(spam)=\frac{2}{6}" title="P(spam)=\frac{2}{6}" /></a>
-* 3. <a href="https://www.codecogs.com/eqnedit.php?latex=P(spam)=\frac{2}{6}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?P(spam)=\frac{2}{6}" title="P(spam)=\frac{2}{6}" /></a>
-* 3. <a href="https://www.codecogs.com/eqnedit.php?latex=P(spam)=\frac{2}{6}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?P(spam)=\frac{2}{6}" title="P(spam)=\frac{2}{6}" /></a>
-* 3. <a href="https://www.codecogs.com/eqnedit.php?latex=P(spam)=\frac{2}{6}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?P(spam)=\frac{2}{6}" title="P(spam)=\frac{2}{6}" /></a>
-* 3. <a href="https://www.codecogs.com/eqnedit.php?latex=P(spam)=\frac{2}{6}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?P(spam)=\frac{2}{6}" title="P(spam)=\frac{2}{6}" /></a>
-* 3. <a href="https://www.codecogs.com/eqnedit.php?latex=P(spam)=\frac{2}{6}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?P(spam)=\frac{2}{6}" title="P(spam)=\frac{2}{6}" /></a>
-* 3. <a href="https://www.codecogs.com/eqnedit.php?latex=P(spam)=\frac{2}{6}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?P(spam)=\frac{2}{6}" title="P(spam)=\frac{2}{6}" /></a>
-* 3. <a href="https://www.codecogs.com/eqnedit.php?latex=P(spam)=\frac{2}{6}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?P(spam)=\frac{2}{6}" title="P(spam)=\frac{2}{6}" /></a>
-* 3. <a href="https://www.codecogs.com/eqnedit.php?latex=P(spam)=\frac{2}{6}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?P(spam)=\frac{2}{6}" title="P(spam)=\frac{2}{6}" /></a>
-* 3. <a href="https://www.codecogs.com/eqnedit.php?latex=P(spam)=\frac{2}{6}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?P(spam)=\frac{2}{6}" title="P(spam)=\frac{2}{6}" /></a>
-* 3. <a href="https://www.codecogs.com/eqnedit.php?latex=P(spam)=\frac{2}{6}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?P(spam)=\frac{2}{6}" title="P(spam)=\frac{2}{6}" /></a>
-* 3. <a href="https://www.codecogs.com/eqnedit.php?latex=P(spam)=\frac{2}{6}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?P(spam)=\frac{2}{6}" title="P(spam)=\frac{2}{6}" /></a>
-* 3. <a href="https://www.codecogs.com/eqnedit.php?latex=P(spam)=\frac{2}{6}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?P(spam)=\frac{2}{6}" title="P(spam)=\frac{2}{6}" /></a>
-* 3. <a href="https://www.codecogs.com/eqnedit.php?latex=P(spam)=\frac{2}{6}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?P(spam)=\frac{2}{6}" title="P(spam)=\frac{2}{6}" /></a>
-* 3. <a href="https://www.codecogs.com/eqnedit.php?latex=P(spam)=\frac{2}{6}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?P(spam)=\frac{2}{6}" title="P(spam)=\frac{2}{6}" /></a>
 
 this is priors
 
