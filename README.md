@@ -102,38 +102,31 @@ it mainly because `-z to the power of e` is always smaller than 1  and the denom
 it always smaller than 1
 
 we can call it as Probability value
-
-### LAB4
-
+### LAB 4
 Multinomial naive bayes classifier to predict spam SMS.WE implement a unigram model here
 
-we need to caculate following 
+1. we need to caculate following 
 
-* 1. <a href="https://www.codecogs.com/eqnedit.php?latex=P(c)=\frac{N_c}{N}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?P(c)=\frac{N_c}{N}" title="P(c)=\frac{N_c}{N}" /></a>
+<a href="https://www.codecogs.com/eqnedit.php?latex=P(c)=\frac{N_c}{N}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?P(c)=\frac{N_c}{N}" title="P(c)=\frac{N_c}{N}" /></a>
 
-which is the probility of class_i occur in all document , in this case we have two class ,one is `spam` and another is 
+which is the probility of class_i occur in all document , in this case we have two class ,one is `spam` and another is `ham`
+in this case 
+<a href="https://www.codecogs.com/eqnedit.php?latex=P(spam)=\frac{2}{6}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?P(spam)=\frac{2}{6}" title="P(spam)=\frac{2}{6}" /></a>
 
-`ham`
+2. after that,we apply following equition, this is the likelihood of that word given a class , 
 
-* 2. <a href="https://www.codecogs.com/eqnedit.php?latex=P(w|c)=\frac{count(w,c)&plus;1)}{count(c)&plus;|V|)}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?P(w|c)=\frac{count(w,c)&plus;1)}{count(c)&plus;|V|)}" title="P(w|c)=\frac{count(w,c)+1)}{count(c)+|V|)}" /></a>
+ <a href="https://www.codecogs.com/eqnedit.php?latex=P(w|c)=\frac{count(w,c)&plus;1)}{count(c)&plus;|V|)}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?P(w|c)=\frac{count(w,c)&plus;1)}{count(c)&plus;|V|)}" title="P(w|c)=\frac{count(w,c)+1)}{count(c)+|V|)}" /></a>
 
-this is the likelihood of that word given a class , 
+> w represent word  , c represent class
+> 
+> count(w,c) is the total number of that word occur in that class
+> 
+> count ( c ) is the total number of word in that class
 
-w represent word  , c represent class
+we also use add-1 smoothing in this case , the purpose is that we aviod the 0 appear in the probility in the every single word by add 1 in the Numerator and add V which is the total number of set(all wrods) to the denominator,althongh the word not occur in the vacabulary ,the probility will not assign 0 
 
-count(w,c) is the total number of that word occur in that class
 
-count (c) is the total number of word in that class
-
-we also use add-1 smoothing in this case , the purpose is that we aviod the 0 appear in the probility in the every single word by add 1 in the Numerator and add V which is the total number of set(all wrods) to the denominator,althongh the 
-
-word not occur in the vacabulary ,the probility will not assign 0 
-
-* 3. <a href="https://www.codecogs.com/eqnedit.php?latex=P(spam)=\frac{2}{6}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?P(spam)=\frac{2}{6}" title="P(spam)=\frac{2}{6}" /></a>
-
-this is priors
-
-* 4. Caculate the Conditional Probilities 
+3. Caculate the Conditional Probilities 
 
 By implement the equition in 2 , calculate the `P(word|class)` of all the word in the `sms` both in `spam` and `ham` ,after that we are able to caculate the likelihood of `P(class ham|sms)` and `P(class spam|sms)` 
 
@@ -142,6 +135,8 @@ which is
 <a href="https://www.codecogs.com/eqnedit.php?latex=P(class&space;ham|sms)&space;=P(class&space;ham)&space;*&space;\frac&space;{count(w_i,c)&plus;1}{count(c)&plus;|V|}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?P(class&space;ham|sms)&space;=P(class&space;ham)&space;*&space;\frac&space;{count(w_i,c)&plus;1}{count(c)&plus;|V|}" title="P(class ham|sms) =P(class ham) * \frac {count(w_i,c)+1}{count(c)+|V|}" /></a>
 
 i : every word in the sms
+
+and using same equition in spam ,after that caculating the ratio and all good to go (:
 
 
 
