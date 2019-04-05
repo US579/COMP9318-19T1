@@ -114,6 +114,7 @@ in this case
 <a href="https://www.codecogs.com/eqnedit.php?latex=P(spam)=\frac{2}{6}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?P(spam)=\frac{2}{6}" title="P(spam)=\frac{2}{6}" /></a>
 
 2. after that,we apply following equition, this is the likelihood of that word given a class , 
+
  <a href="https://www.codecogs.com/eqnedit.php?latex=P(w|c)=\frac{count(w,c)&plus;1)}{count(c)&plus;|V|)}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?P(w|c)=\frac{count(w,c)&plus;1)}{count(c)&plus;|V|)}" title="P(w|c)=\frac{count(w,c)+1)}{count(c)+|V|)}" /></a>
 
 > w represent word  , c represent class
