@@ -76,6 +76,7 @@ optimal cost that dividing [18, 11, 13, 17] into two bins is 0 + 18.999 == 18.99
 
 programming.
 
+#### Marks: 100/100
 
 ### LAB3
 
@@ -102,6 +103,9 @@ it mainly because `-z to the power of e` is always smaller than 1  and the denom
 it always smaller than 1
 
 we can call it as Probability value
+
+#### Marks: 100/100
+
 ### LAB 4
 Multinomial naive bayes classifier to predict spam SMS.WE implement a unigram model here
 
