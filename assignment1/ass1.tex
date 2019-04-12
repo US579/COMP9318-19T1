@@ -289,25 +289,25 @@ It is manily because naive Bayes classifier is simple to do perdicitions by appl
 
 \section*{question 3}
 \subsection*{3.1}
-Based on the   ,for given $u_j$,we can write the log likelihood function
+For given $u_j$,we can write the log likelihood function
 
 $$\ell(u|q)=\sum\limits_{j=1}^nlogP(u_j|q)$$
 $$\Longrightarrow \sum\limits_{j=1}^nlog(\left( \begin{array}{c} 1 \\ u_j \end{array} \right)q^{\frac{u_jp_{1j}}{p_{1j}+p_{2j}}}(1-q){^{\frac{u_jp_{2j}}{p_{1j}+p_{2j}}}})$$
 
-$$\Longrightarrow \sum\limits_{j=1}^n(log\left( \begin{array}{c} 1 \\ u_j \end{array} \right)+{{\frac{u_jp_{1j}}{p_{1j}+p_{2j}}}log q}+ {{\frac{u_jp_{2j}}{p_{1j}+p_{2j}}}log(1-q)})$$
+$$\Longrightarrow \sum\limits_{j=1}^n(log\left( \begin{array}{c} 1 \\ u_j \end{array} \right)+{{\frac{u_jp_{1j}}{p_{1j}+p_{2j}}}log (q)}+ {{\frac{u_jp_{2j}}{p_{1j}+p_{2j}}}log(1-q)})$$
 
 \subsection*{3.2}
 Let's find the partial derivative of $q$ for the likelihood log:
 $$\frac{\partial logP}{\partial q} = \sum\limits_{j=1}^n(\frac{u_j \cdot p_{2j}}{p_{1j}+p_{2j}} \cdot q + \frac{u_j \cdot p_{2j}}{p_{1j}+p_{2j}} \cdot (1-q))$$
 \newpage
 Let the function equal to 0 and substitute numerical value to the formula
-$$\frac{1 \cdot 0.3}{5} \cdot q + \frac{4 \cdot 0.3}{5} \cdot (1-q)+\frac{2 \cdot 0.2}{7} \cdot q + \frac{5 \cdot 0.2}{7} \cdot (1-q) + \frac{7 \cdot 0.5}{8} \cdot q + \frac{1 \cdot 0.5}{8} \cdot (1-q) = 0$$
+$$\frac{1 \cdot 0.3}{5} \cdot q - \frac{4 \cdot 0.3}{5} \cdot (1-q)+\frac{2 \cdot 0.2}{7} \cdot q - \frac{5 \cdot 0.2}{7} \cdot (1-q) + \frac{7 \cdot 0.5}{8} \cdot q - \frac{1 \cdot 0.5}{8} \cdot (1-q) = 0$$
 $\Longrightarrow q = 0.5546428571428571$
 
 So,the MLE of $q1 =  0.5546428571428571$ and $q2 = 0.4453571428571429 $
 
 \subsection*{3.3}
-Substitute $q_1$ and $q_2$ from above,and we can get:
+Substitute $q_1$ and $q_2$ from above,and we can get
 $$u_1 = 0.1\cdot q_1 + 0.4 \cdot q_2$$
 $$u_2 = 0.2\cdot q_1 + 0.5 \cdot q_2$$
 $$u_3 = 0.7\cdot q_1 + 0.1 \cdot q_2$$
