@@ -289,22 +289,32 @@ It is manily because naive Bayes classifier is simple to do perdicitions by appl
 
 \section*{question 3}
 \subsection*{3.1}
-For given $u_j$,we can write the log likelihood function
-
-$$\ell(u|q)=\sum\limits_{j=1}^nlogP(u_j|q)$$
-$$\Longrightarrow \sum\limits_{j=1}^nlog(\left( \begin{array}{c} 1 \\ u_j \end{array} \right)q^{\frac{u_jp_{1j}}{p_{1j}+p_{2j}}}(1-q){^{\frac{u_jp_{2j}}{p_{1j}+p_{2j}}}})$$
-
-$$\Longrightarrow \sum\limits_{j=1}^n(log\left( \begin{array}{c} 1 \\ u_j \end{array} \right)+{{\frac{u_jp_{1j}}{p_{1j}+p_{2j}}}log (q)}+ {{\frac{u_jp_{2j}}{p_{1j}+p_{2j}}}log(1-q)})$$
+Due to the different pure cotains in the compants,we can write Model:
+$$P_{M,j}=\sum\limits_{i=1}^{2}p_{i,j} \cdot q_i $$
+according to obervation,the log likelihood function can be written as 
+$$\ell(u_j|P_M)=log(\prod\limits_{j=1}^3P(u_j|P_M))$$
+$$\Longrightarrow log(\prod_{j=1}^{3} P_{M,j}^{u_j} )$$
+$$\Longrightarrow \sum\limits_{j=1}^{3}u_j \cdot log(P_{M,j})) $$
+substitute $P_{M,j}$ to the formula,we can get log likelihood function
+$$\Longrightarrow \sum\limits_{j=1}^{3}u_j \cdot log(\sum\limits_{i=1}^{2}p_{i,j} \cdot q_i)) $$
 
 \subsection*{3.2}
-Let's find the partial derivative of $q$ for the likelihood log:
-$$\frac{\partial logP}{\partial q} = \sum\limits_{j=1}^n(\frac{u_j \cdot p_{2j}}{p_{1j}+p_{2j}} \cdot q + \frac{u_j \cdot p_{2j}}{p_{1j}+p_{2j}} \cdot (1-q))$$
-\newpage
-Let the function equal to 0 and substitute numerical value to the formula
-$$\frac{1 \cdot 0.3}{5} \cdot q - \frac{4 \cdot 0.3}{5} \cdot (1-q)+\frac{2 \cdot 0.2}{7} \cdot q - \frac{5 \cdot 0.2}{7} \cdot (1-q) + \frac{7 \cdot 0.5}{8} \cdot q - \frac{1 \cdot 0.5}{8} \cdot (1-q) = 0$$
-$\Longrightarrow q = 0.5546428571428571$
+Due to $q_{1} + q_2 = 1$,Let's find the derivative of $q$ for the log likelihood function:
 
-So,the MLE of $q1 =  0.5546428571428571$ and $q2 = 0.4453571428571429 $
+
+
+$$\frac{\partial logP}{\partial q} = \sum\limits_{j=1}^{3}\frac{u_j \cdot (p_{1,j}-p_{2,j})}{p_{2,j} + (p_{1,j}-p_{2,j}) \cdot q}$$
+
+now ,Let the function equal to 0 and substitute observed value to the formula
+
+$$ \frac{0.3 \cdot -0.3}{0.4 - 0.3 \cdot q}+\frac{0.2 \cdot -0.3}{0.5 - 0.3 \cdot q}+\frac{0.5\cdot0.6}{0.1 + 0.6 \cdot q} = 0 $$
+$\Longrightarrow q = 0.635155135839922$
+
+
+
+
+
+So,the MLE of $q1 =  0.635155135839922 $ and $q2 = 0.364844864160078 $
 
 \subsection*{3.3}
 Substitute $q_1$ and $q_2$ from above,and we can get
@@ -313,9 +323,9 @@ $$u_2 = 0.2\cdot q_1 + 0.5 \cdot q_2$$
 $$u_3 = 0.7\cdot q_1 + 0.1 \cdot q_2$$
 we can deduce
 
-$$u_1= 0.23360714285714287$$
-$$u_2= 0.3336071428571429$$
-$$u_3= 0.4327857142857142$$
+$$u_1= 0.2094534592480234$$
+$$u_2= 0.30945345924802337$$
+$$u_3= 0.4810930815039532$$
 
 
 \end{document}
