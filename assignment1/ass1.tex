@@ -291,12 +291,12 @@ It is manily because naive Bayes classifier is simple to do perdicitions by appl
 \subsection*{3.1}
 Due to the different pure cotains in the compants,we can write Model:
 $$P_{M,j}=\sum\limits_{i=1}^{2}p_{i,j} \cdot q_i $$
-according to obervation,the log likelihood function can be written as 
+according to observation,the log likelihood function can be written as 
 $$\ell(u_j|P_M)=log(\prod\limits_{j=1}^3P(u_j|P_M))$$
 $$\Longrightarrow log(\prod_{j=1}^{3} P_{M,j}^{u_j} )$$
-$$\Longrightarrow \sum\limits_{j=1}^{3}u_j \cdot log(P_{M,j})) $$
+$$\Longrightarrow \sum\limits_{j=1}^{3}u_j \cdot log(P_{M,j}) $$
 substitute $P_{M,j}$ to the formula,we can get log likelihood function
-$$\Longrightarrow \sum\limits_{j=1}^{3}u_j \cdot log(\sum\limits_{i=1}^{2}p_{i,j} \cdot q_i)) $$
+$$\Longrightarrow \sum\limits_{j=1}^{3}u_j \cdot log(\sum\limits_{i=1}^{2}p_{i,j} \cdot q_i) $$
 
 \subsection*{3.2}
 Due to $q_{1} + q_2 = 1$,Let's find the derivative of $q$ for the log likelihood function:
