@@ -156,7 +156,7 @@ and using same equition in spam ,after that caculating the ratio and all good to
 
 
 
-## Authors
+## Author
 
 US579 
 
