@@ -160,7 +160,3 @@ and using same equition in spam ,after that caculating the ratio and all good to
 
 WANZE LIU
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
