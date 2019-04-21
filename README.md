@@ -146,10 +146,21 @@ and using same equition in spam ,after that caculating the ratio and all good to
 
 ### ASSIGNMENT
 
+1.OLAP
+
+2.MLE
+
+3.MLE uisng Binomial distribution
 
 
 
 
 
+## Authors
 
+US579 
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
