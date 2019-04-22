@@ -142,7 +142,7 @@ i : every word in the sms
 
 and using same equition in spam ,after that caculating the ratio and all good to go (:
 
-
+#### Marks: 100/100
 
 ### ASSIGNMENT
 
