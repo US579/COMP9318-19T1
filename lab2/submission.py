@@ -2,8 +2,8 @@
 import pandas as pd
 import numpy as np
 
-#x = [3, 1, 18, 11, 13, 17]
-#num_bins = 4
+x = [3, 1, 18, 11, 13, 17]
+num_bins = 4
 
 ################# Question 1 #################
 
@@ -64,9 +64,11 @@ def v_opt_dp(x, num_bins):# do not change the heading of the function
                         index_mincost_path = lis_cost.index(min(lis_cost))
                         path_matrix[i-1][j] = set_path[index_mincost_path]
                         index_matrix[i-1][j] = suffix
+    print(index_matrix)
+    print(path_matrix)
 
     bins = path_matrix[num_bins-1][0]
     return cost_matrix , bins
 
-
+print(v_opt_dp(x, num_bins))
 
