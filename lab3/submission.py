@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-
+np.set_printoptions(threshold=np.nan)
 data_file='./asset/a'
 
 ## Read in the Data...
@@ -20,15 +20,16 @@ def sigmoid(inX):
 def logistic_regression(data, labels, weights, num_epochs, learning_rate): # do not change the heading of the function
     dataMat = np.insert(data,0,1,axis=1)
     lablMat = np.mat(labels).T
+    print(dataMat)
+    print(sigmoid(dataMat*weights) - lablMat)
     for i in range(num_epochs):
-        #the difference between the real probablity and label which called error rate
+        # the difference between the real probablity and label which called error rate
         error = sigmoid(dataMat*weights) - lablMat
-        weights -= learning_rate * dataMat.T*error
-    print(np.array(weights.T.tolist()[0]))
+        weights = weights - learning_rate * dataMat.T*error
     return np.array(weights.T.tolist()[0])
 
-
 weights = logistic_regression(data,labels,weights,num_epochs,learning_rate)
+print(weights)
 
 
 def plotBestFit(weights,dataMat,labelMat):
