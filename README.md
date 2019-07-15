@@ -104,8 +104,7 @@ it always smaller than 1
 
 we can call it as Probability value
 
-![image text](https://github.com/US579/COMP9318-19T1/blob/master/lab3/regression.png)
-
+<div align=center><img width="300" height="300" src="https://github.com/US579/COMP9318-19T1/blob/master/lab3/regression.png"/></div>
 
 #### Marks: 100/100
 
